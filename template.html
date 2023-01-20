@@ -87,25 +87,6 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -132,21 +113,22 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="toc-section-number">1</span>  Introduction</a></li>
-  <li><a href="#about-quarto-extensions-formats-and-quarto-journals-article" id="toc-about-quarto-extensions-formats-and-quarto-journals-article" class="nav-link" data-scroll-target="#about-quarto-extensions-formats-and-quarto-journals-article"><span class="toc-section-number">2</span>  About Quarto Extensions formats And Quarto Journals Article</a></li>
-  <li><a href="#structure-of-this-repository" id="toc-structure-of-this-repository" class="nav-link" data-scroll-target="#structure-of-this-repository"><span class="toc-section-number">3</span>  Structure of this repository</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">1</span>  Introduction</a>
   <ul class="collapse">
-  <li><a href="#extensionsaft" id="toc-extensionsaft" class="nav-link" data-scroll-target="#extensionsaft"><span class="toc-section-number">3.1</span>  <code>_extensions\aft</code></a></li>
+  <li><a href="#chatgpt-what-are-the-basics-of-markdown" id="toc-chatgpt-what-are-the-basics-of-markdown" class="nav-link" data-scroll-target="#chatgpt-what-are-the-basics-of-markdown"><span class="toc-section-number">1.1</span>  ChatGPT, what are the basics of markdown?</a></li>
+  <li><a href="#and-what-about-the-basics-of-quarto" id="toc-and-what-about-the-basics-of-quarto" class="nav-link" data-scroll-target="#and-what-about-the-basics-of-quarto"><span class="toc-section-number">1.2</span>  And what about the basics of Quarto?</a></li>
   </ul></li>
-  <li><a href="#checklist-creating-a-custom-format" id="toc-checklist-creating-a-custom-format" class="nav-link" data-scroll-target="#checklist-creating-a-custom-format"><span class="toc-section-number">4</span>  Checklist: Creating a custom format</a></li>
-  <li><a href="#demo-of-some-features-found-in-this-demo-journal-template" id="toc-demo-of-some-features-found-in-this-demo-journal-template" class="nav-link" data-scroll-target="#demo-of-some-features-found-in-this-demo-journal-template"><span class="toc-section-number">5</span>  Demo of some features found in this demo journal template</a>
+  <li><a href="#using-this-template" id="toc-using-this-template" class="nav-link" data-scroll-target="#using-this-template"><span class="toc-section-number">2</span>  Using this template</a>
   <ul class="collapse">
-  <li><a href="#sec-shortcode" id="toc-sec-shortcode" class="nav-link" data-scroll-target="#sec-shortcode"><span class="toc-section-number">5.1</span>  Shortcode demo</a></li>
-  <li><a href="#sec-chunks" id="toc-sec-chunks" class="nav-link" data-scroll-target="#sec-chunks"><span class="toc-section-number">5.2</span>  Code chunk</a></li>
-  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"><span class="toc-section-number">5.3</span>  Text color</a></li>
+  <li><a href="#format-options-and-differences-between-iop-html-and-iop-pdf" id="toc-format-options-and-differences-between-iop-html-and-iop-pdf" class="nav-link" data-scroll-target="#format-options-and-differences-between-iop-html-and-iop-pdf"><span class="toc-section-number">2.1</span>  Format options and differences between <code>iop-html</code> and <code>iop-pdf</code></a></li>
+  <li><a href="#sec-shortcode" id="toc-sec-shortcode" class="nav-link" data-scroll-target="#sec-shortcode"><span class="toc-section-number">2.2</span>  Shortcode demo</a></li>
+  <li><a href="#sec-chunks" id="toc-sec-chunks" class="nav-link" data-scroll-target="#sec-chunks"><span class="toc-section-number">2.3</span>  Code chunk</a></li>
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"><span class="toc-section-number">2.4</span>  Text color</a></li>
   <li><a href="#using-references" id="toc-using-references" class="nav-link" data-scroll-target="#using-references">Using references</a></li>
+  <li><a href="#quick-maths" id="toc-quick-maths" class="nav-link" data-scroll-target="#quick-maths"><span class="toc-section-number">2.5</span>  Quick maths</a></li>
   </ul></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
+  <li><a href="#sec-ack" id="toc-sec-ack" class="nav-link" data-scroll-target="#sec-ack"><span class="toc-section-number">3</span>  Acknowledgements</a></li>
+  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="toc-section-number">4</span>  Appendices</a></li>
   </ul>
 </nav>
 </div>
@@ -207,206 +189,134 @@ div.csl-indent {
 
 </header>
 
-<section id="sec-intro" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="sec-intro"><span class="header-section-number">1</span> Introduction</h2>
-<p>This is a dummy example only for the purpose to use this repo as a template starter for creating new formats. For this <code>article-format-template</code> we call our dummy article <code>aft</code>.</p>
-<p>This quarto extension format supports PDF and HTML outputs. <code>quarto-journals</code> is aiming at porting existing <span class="math inline">\(\LaTeX\)</span> template from journals to be used with quarto. PDF format is what require the most work to fit the journals guideline, but Quarto offer a nice rendering for HTML output too. This demo format template only use basic HTML format without any customization for now.</p>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<section id="chatgpt-what-are-the-basics-of-markdown" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="chatgpt-what-are-the-basics-of-markdown"><span class="header-section-number">1.1</span> ChatGPT, what are the basics of markdown?</h2>
+<p>Markdown is a lightweight markup language that is used to format plain text documents. It is designed to be simple and easy to read, and it uses a set of characters and symbols to indicate formatting such as headings, lists, and emphasis. Some of the basics of Markdown include:</p>
+<ul>
+<li><p>Headings are indicated by the pound sign (#) followed by a space. The number of pound signs used indicates the level of the heading, with one pound sign indicating the highest level heading and six pound signs indicating the lowest level heading.</p></li>
+<li><p>Lists are created by using the dash (-) or asterisk (*) followed by a space for each list item.</p></li>
+<li><p>Emphasis can be indicated by using asterisks (*) or underscores (_) around a word or phrase. One asterisk or underscore is used for italic emphasis, and two asterisks or underscores are used for bold emphasis.</p></li>
+<li><p>Links can be added by using the brackets [] followed by the link text, then the brackets () followed by the link URL.</p></li>
+<li><p>Images can be added by using the exclamation mark ! followed by the brackets [] for the image’s alternate text, then the brackets () followed by the image URL.</p></li>
+<li><p>Code blocks can be indicated by using three back-ticks (```) before and after the code snippet.</p></li>
+</ul>
+<p>Markdown is a versatile and flexible language, and there are many more elements you can add, but these are the basics to get you started. Additionally, there are different flavors of markdown, so some elements may vary depending on the implementation.</p>
+<p>For more “official” guidance: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a>.</p>
 </section>
-<section id="about-quarto-extensions-formats-and-quarto-journals-article" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="about-quarto-extensions-formats-and-quarto-journals-article"><span class="header-section-number">2</span> About Quarto Extensions formats And Quarto Journals Article</h2>
-<p>First, please get familiar with the following resources:</p>
-<ul>
-<li><a href="https://quarto.org/docs/extensions/formats.html">Creating Formats</a> in Quarto as part of the <a href="https://quarto.org/docs/extensions/">Extensions</a> mechanism.</li>
-<li><a href="https://quarto.org/docs/journals/">Journals Articles</a> for Quarto.</li>
-</ul>
-</section>
-<section id="structure-of-this-repository" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="structure-of-this-repository"><span class="header-section-number">3</span> Structure of this repository</h2>
-<p>Everything for the extensions is in <code>_extensions</code>. See Quarto doc for details.</p>
-<ul>
-<li><p>In <code>partials</code>, you’ll find the <code>.tex</code> partials that can be used and should be removed or tweaked,s</p></li>
-<li><p>Your extension can make shortcodes and lua filters available. This document shows the effect of the one provided in the <code>aft</code> format.</p></li>
-<li><p><code>aft</code> format sets some defaults which are different from <code>pdf</code> or <code>html</code>, link setting links to URL in read inside PDF output.</p></li>
-</ul>
-<p>Source repository for this template format can found on <a href="https://github.com/quarto-journals/article-format-template">Github</a></p>
-<section id="extensionsaft" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="extensionsaft"><span class="header-section-number">3.1</span> <code>_extensions\aft</code></h3>
-<p>In this folder you’ll find everything that defines the extensions which could be installed using <code>quarto install extension</code> or be part of the template when using <code>quarto use template</code></p>
-<dl>
-<dt>Format Metadata</dt>
-<dd>
-This is in <code>_extension.yml</code> is where all the metadata about the format are defined so that Quarto knows what to use. Adapt this file for you own template.
-</dd>
-<dt>Partials</dt>
-<dd>
-<p>In <code>partials</code>, there are the <code>.tex</code> files that will be used as Pandoc’s template. We provide here all the partials supported by Quarto and custom one for this format. Quarto allows to provide partials to ease the process of tweaking the default latex Pandoc’s template and keeping it up to date.<br>
-This template repo contains all the relevant partials that you can use with Quarto <em>as example</em>. We only tweaked <code>title.tex</code> to show the usage of a custom partials called <code>_custom.tex</code>.<br>
-<strong>Only keep the partials that you need to tweak for the format you are creating</strong></p>
-<p>If you need to completely change the default template (i.g customizing partials is not enough), then you need to provide your own template to Pandoc based on <a href="https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/pdf/pandoc/template.tex"><code>template.tex</code></a> and also using partials or not. This can be provided using the <code>template</code> YAML key in <code>_extension.yml</code> for Quarto to use it.</p>
-<p>This is considered advanced configuration as it will be harder to maintain than only using partials but could be required for some specific format. Be aware that this may lead to loose some Pandoc or Quarto features tied to default <code>template.tex</code> content if you remove some specific parts.</p>
-</dd>
-<dt>Lua Filters</dt>
-<dd>
-<p>Most of the time, custom formats will need Lua filters to provide specific features like cross format supports or provides custom shortcodes through the Quarto extension mechanism. Those filters will be available to the user and could be used in the custom formats (according to <code>_extensions</code> metadata). We have provided two examples:</p>
-<ul>
-<li><code>color-text.lua</code>, a Lua filter used to add color to inline text for PDF and HTML outputs using the same Markdown syntax</li>
-<li><code>shorcodes.lua</code>, a Lua filter which follow <a href="https://quarto.org/docs/authoring/shortcodes.html#custom-shortcodes">Quarto custom shortcodes</a> guidelines to provide a <code>{{&lt; LaTeX &gt;}}</code> shortcode to nicely print LaTeX in PDF and HTML.</li>
-</ul>
-<p><strong>Remove or replace with your own Lua filters</strong></p>
-</dd>
-<dt>Format resources</dt>
-<dd>
-<p>Resources required by the format needs to be available. We have provided two examples:</p>
-<ul>
-<li><code>te.bst</code> is a biblio style file for demo. It has been downloaded from https://www.economics.utoronto.ca/osborne/latex/TEBST.HTM (http://econtheory.org/technical/te.bst) - Licence <a href="https://www.latex-project.org/lppl/">LPPL</a></li>
-<li><code>aft.cls</code> is a dummy class file for this example format. It is a copy of official <code>article.cls</code>, the one provided in LaTeX installation (i.e at <code>kpsewhich article.cls</code>) and renamed as example (Licence LaTeX Project Public License)</li>
-<li><code>custom.scss</code> is a style file to have a custom theme for our HTML format so that our Lua filter feature <code>color-tex.lua</code> works.</li>
-</ul>
-<p>Those files are referenced within the <code>_extension.yml</code> to be used with our example format.</p>
-<p><strong>Remove and replace with your own resources</strong></p>
-</dd>
-<dt><code>.quartoignore</code></dt>
-<dd>
-<p>Sometimes it is useful to have some files only needed for reference or for development. They should be available in the source repository but not downloaded to the user when <code>quarto use template</code> is used.</p>
-<p><strong>Use <code>.quartoignore</code> to register such file and folder (one file or folder per line)</strong></p>
-</dd>
-<dt><code>style-guide</code> folder</dt>
-<dd>
-<p>For <code>quarto-journals</code> format, use <code>style-guide</code> folder to include any documentation and resourced used for format creation, like a journal style guide or original <code>.tex</code> template. This folder is already added in <code>.quartoignore</code> in this example repo.</p>
-<p><strong>Remove, rename or add to this folder</strong></p>
-</dd>
-<dt><code>template.qmd</code></dt>
-<dd>
-<p>This file is the template document that shows how to use the custom format. It will be downloaded with other resource by <code>quarto use template</code>, and even offered to be renamed if the name <code>template.qmd</code> is used.</p>
-<p>This file will usually use the custom format (here <code>aft-pdf</code> and <code>aft-html</code>) and show how to use the template. When you’ll copy this template, you should be able to render this document to the demo format.</p>
-<p><strong>Adapt this file to provide a suitable template for your custom format</strong></p>
-</dd>
-<dt>Other files</dt>
-<dd>
-<p>Other files are needed by the template and are usually user provided - they are not part of the custom format.</p>
-<p>Here <code>bibliography.bib</code> is here to demo the usage of the bst file from the custom format.</p>
-<p><strong>Remove this file and provide a suitable one for your template</strong></p>
-</dd>
-</dl>
-<div style="page-break-after: always;"></div>
+<section id="and-what-about-the-basics-of-quarto" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="and-what-about-the-basics-of-quarto"><span class="header-section-number">1.2</span> And what about the basics of Quarto?</h2>
+<p>Quarto is a strategy board game for two players. It was invented by Swiss mathematician Blaise Müller…</p>
+<p>..I’m going to stop you there.</p>
+<p>Basics of Quarto: <a href="https://quarto.org/docs/guide/" class="uri">https://quarto.org/docs/guide/</a>.</p>
 </section>
 </section>
-<section id="checklist-creating-a-custom-format" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="checklist-creating-a-custom-format"><span class="header-section-number">4</span> Checklist: Creating a custom format</h2>
-<p>Here is the checklist to help you know what to modify:</p>
+<section id="using-this-template" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Using this template</h1>
+<section id="format-options-and-differences-between-iop-html-and-iop-pdf" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="format-options-and-differences-between-iop-html-and-iop-pdf"><span class="header-section-number">2.1</span> Format options and differences between <code>iop-html</code> and <code>iop-pdf</code></h2>
 <ul>
-<li>Read the resources mentioned at the top,</li>
-<li>Use this template repo to create a new repository for your format (Click on “Use this template” to create new github repo)</li>
-<li>Once you are acquainted with the content, remove the resources that are there only as example (see above)</li>
-<li>Update README by replacing <code>aft</code> and <code>Article Format Template</code> mentions for your journal format</li>
-<li>Keep only the template partials that you need to tweak, and add custom ones if needed</li>
-<li>Add any Lua filters for shortcodes and other that would be useful to create the expected output format</li>
-<li>Add any external resource your format will need, and that should be part of the extension format that will be downloaded,</li>
-<li>Check <code>_extension.yml</code> is updated correctly</li>
-<li>Modify the skeleton <code>template.qmd</code> to your format and add any required resources to be downloaded to user.</li>
-<li>Check <code>.quartoignore</code> is updated which everything that should not be downloaded.</li>
-<li>Publish a demo of you format to github pages of the repo by using <code>quarto publish</code> command</li>
+<li>For the HTML format, we are using Pandoc citeproc to include the bibliography. Here <code>reference-section-title</code> controls the title for the chapter that will be used (although, specific to this template, we also use citeproc for the PDF to get Harvard style citations).</li>
+<li>For the PDF format, <code>natbib</code> is used by default and the bibliography is included with a title by the <span class="math inline">\(\LaTeX\)</span> template.</li>
 </ul>
+<p>This format provides a number of custom YAML header options to control the PDF format:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set to true to use the orcidlink package to display linked orcid logos</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># beside authors on title page</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">display-orcids</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># use journal macros set out in the IOP style guide</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># to add which journal an article is targeting</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># e.g. \ERL = Environmental Research Letters</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">submitted-to</span><span class="kw">:</span><span class="at"> \ERL</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># test your article in two column form</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># NB: does not work well with code chunk outputs</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">twocol</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># sets Vancouver numeric citation style</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># comment out both iop-vancouver and cite-method for Harvard author year citation style</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">iop-vancouver</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">cite-method</span><span class="kw">:</span><span class="at"> natbib</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># see iopart.cls for option source code</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># possible options (separate with comma):</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># a4paper,letterpaper,10pt,12pt,draft,final,titlepage,notitlepage</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">classoptions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For the most part, it <em>should not be necessary</em> to modify the <code>_extension.yml</code> file, except maybe to switch the referencing style for the HTML output.</p>
 </section>
-<section id="demo-of-some-features-found-in-this-demo-journal-template" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="demo-of-some-features-found-in-this-demo-journal-template"><span class="header-section-number">5</span> Demo of some features found in this demo journal template</h2>
-<section id="sec-shortcode" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">5.1</span> Shortcode demo</h3>
+<section id="sec-shortcode" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">2.2</span> Shortcode demo</h2>
 <p>PDF are rendered using <span class="math inline">\(\LaTeX\)</span> but it is best if one can use a Markdown syntax for cross format support.</p>
-<p><code>\LaTeX</code> used in source is a shortcode syntax where the shortcode is included in the extension folder <code>_extensions</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{&lt; latex &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>used in source is a shortcode syntax where the shortcode is included in the extension folder <code>_extensions</code>.</p>
+<p>Alternatively, Quarto supports a <a href="https://quarto.org/docs/extensions/shortcodes.html">number of shortcodes</a> natively. For example,</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div style="page-break-after: always;"></div>
+<p>…inserts a page break.</p>
 </section>
-<section id="sec-chunks" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="sec-chunks"><span class="header-section-number">5.2</span> Code chunk</h3>
+<section id="sec-chunks" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-chunks"><span class="header-section-number">2.3</span> Code chunk</h2>
 <p>This format hide chunks by default as option has been set in <code>_extension.yml</code> file.</p>
 <div class="cell">
 
 </div>
 <p>But you can set <code>echo</code> option to <code>true</code> locally in the chunk</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>m_pois <span class="ot">&lt;-</span> <span class="fu">glm</span>(Days <span class="sc">~</span> (Eth <span class="sc">+</span> Sex <span class="sc">+</span> Age <span class="sc">+</span> Lrn)<span class="sc">^</span><span class="dv">2</span>, <span class="at">data =</span> quine, <span class="at">family =</span> poisson)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_pois)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-glm(formula = Days ~ (Eth + Sex + Age + Lrn)^2, family = poisson, 
-    data = quine)
-
-Deviance Residuals: 
-    Min       1Q   Median       3Q      Max  
--7.6533  -2.7796  -0.5301   1.5749   8.1955  
-
-Coefficients: (1 not defined because of singularities)
-            Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)  2.93246    0.09826  29.843  &lt; 2e-16 ***
-EthN        -0.17399    0.12134  -1.434   0.1516    
-SexM        -0.71452    0.12229  -5.843 5.14e-09 ***
-AgeF1       -0.04270    0.12691  -0.336   0.7365    
-AgeF2       -0.08632    0.16164  -0.534   0.5933    
-AgeF3       -0.15290    0.11898  -1.285   0.1987    
-LrnSL        0.21608    0.14558   1.484   0.1377    
-EthN:SexM    0.43902    0.09208   4.768 1.86e-06 ***
-EthN:AgeF1  -0.92889    0.14657  -6.337 2.34e-10 ***
-EthN:AgeF2  -1.33398    0.13504  -9.879  &lt; 2e-16 ***
-EthN:AgeF3  -0.11242    0.13478  -0.834   0.4042    
-EthN:LrnSL   0.26415    0.11378   2.322   0.0203 *  
-SexM:AgeF1  -0.05565    0.16303  -0.341   0.7328    
-SexM:AgeF2   1.09942    0.15281   7.195 6.26e-13 ***
-SexM:AgeF3   1.15949    0.13859   8.366  &lt; 2e-16 ***
-SexM:LrnSL   0.04143    0.13718   0.302   0.7627    
-AgeF1:LrnSL -0.13019    0.15688  -0.830   0.4066    
-AgeF2:LrnSL  0.37340    0.14563   2.564   0.0103 *  
-AgeF3:LrnSL       NA         NA      NA       NA    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-(Dispersion parameter for poisson family taken to be 1)
-
-    Null deviance: 2073.5  on 145  degrees of freedom
-Residual deviance: 1368.7  on 128  degrees of freedom
-AIC: 1993.1
-
-Number of Fisher Scoring iterations: 5</code></pre>
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa</code></pre>
 </div>
 </div>
 </section>
-<section id="sec-summary" class="level3" data-number="5.3">
-<h3 data-number="5.3" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">5.3</span> Text color</h3>
+<section id="sec-summary" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">2.4</span> Text color</h2>
 <p>Our format makes applying color on inline text possible using the <code>[content]{color=&lt;name&gt;}</code> syntax. Let’s see an example.</p>
 <p>Here we are using a special feature of our format which is the coloring because <span class="color-mypink">pink is a <strong>nice</strong> color</span>.</p>
 <p>This is possible thanks to the Lua Filter included in the custom extension format.</p>
 </section>
-<section id="using-references" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="using-references">Using references</h3>
-<p>I did not read this book <span class="citation" data-cites="Brown2019">[<a href="#ref-Brown2019" role="doc-biblioref">1</a>]</span> but it must be interesting.</p>
-<p>Differences between <code>aft-html</code> and <code>aft-pdf</code>:</p>
-<ul>
-<li>For the HTML format, we are using Pandoc citeproc to include the bibliography. Here <code>reference-section-title</code> controls the title for the chapter that will be used.</li>
-<li>For the PDF format, <code>natbib</code> is used by default and the bibliography is included with a title by the LaTeX template.</li>
-</ul>
+<section id="using-references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="using-references">Using references</h2>
+<p>I did not read this book <span class="citation" data-cites="Brown2019">[@Brown2019]</span> – coded <code>[@Brown2019]</code> – but it must be interesting. We can add all references in the our bibliography file, even if not cited in text, with the following YAML code:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nocite</span><span class="kw">:</span><span class="at"> </span><span class="st">'@*'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="quick-maths" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="quick-maths"><span class="header-section-number">2.5</span> Quick maths</h2>
+<p><span class="math inline">\(\LaTeX\)</span> and Quarto handle maths very well. This can be either inline, such as <span class="math inline">\(2 + 2 = 4\)</span> - 1 that’s 3, or display maths:</p>
+<p><span class="math display">\[
+P(e) - {n \choose k} p^k (2-p)^{n-k}
+\]</span></p>
+<p>However, the <code>iopart.cls</code> handles equations differently; please see the IOP <span class="math inline">\(\LaTeX\)</span> style guide for how to format numbered equations as below.</p>
+<p><span class="math display">\[\begin{eqnarray}
+\alpha + \beta =\gamma^2, \label{eq1}\\
+\alpha^2 + 2\gamma + \cos\theta = \delta. \label{eq2}
+\end{eqnarray}\]</span></p>
+<div style="page-break-after: always;"></div>
+<p>Please note especially p2:</p>
+<blockquote class="blockquote">
+<p>“Also note that there is an incompatibility between amsmath.sty and iopart.cls which cannot be completely worked around. If your article relies on commands in amsmath.sty that are not available in iopart.cls, you may wish to consider using a different class file.”</p>
+</blockquote>
+<p>In order to avoid package clashes in this template, lines 788-789 of <code>iopart.cls</code> were commented out.</p>
 </section>
 </section>
-<section id="bibliography" class="level1 unnumbered">
-
-
+<section id="sec-ack" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Acknowledgements</h1>
+<p>I thank the authors of previous article templates, from whom I mercilessly copied and pasted.</p>
+</section>
+<section id="appendices" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Appendices</h1>
+<p>Appendices must be labelled A, B, C etc. and placed here: after the <a href="#sec-ack">Acknowledgements</a> but before the bibliography.</p>
+<p>To do so, start with the <span class="math inline">\(\LaTeX\)</span> control sequence <code>\appendix</code>, followed by normal section headings <code># Appendix A</code>, <code># Appendix B</code>, etc.</p>
+<p>If the appendices contain numbered figures or equations, <code>\appendix</code> must be followed by <code>\setcounter{section}{1}</code>.</p>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-Brown2019" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Brown T 2019 <em>Deforestation and its impact on global climate change</em> (Anytown, UK: University Press)</div>
-</div>
-<div id="ref-Smith2022" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Smith J 2022 The impact of human activity on biodiversity loss <em>Journal of Environmental Science</em> <strong>55</strong> 123–38</div>
-</div>
-<div id="ref-Doe2021" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Doe J 2021 Ecosystem management strategies for climate change adaptation <em>Nature Climate Change</em> <strong>11</strong> 567–76</div>
-</div>
-<div id="ref-Johnson2020" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Johnson M 2020 Renewable energy and carbon sequestration: Solutions for the ecological emergency <em>Annual Review of Energy and the Environment</em> <strong>45</strong> 98–121</div>
-</div>
-<div id="ref-Davis2018" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Davis K 2018 Biodiversity conservation in the 21st century: Challenges and opportunities <em>Annual Review of Ecology, Evolution, and Systematics</em> <strong>49</strong> 1–23</div>
-</div>
-</div></section></div></main>
+</main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
