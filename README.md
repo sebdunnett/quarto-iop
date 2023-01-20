@@ -1,23 +1,23 @@
 # Institute of Physics (IOP)
 
-This is a Quarto template that assists you in creating a manuscript for IOP journals. You can learn more about ...
+This Quarto format will help you create documents for journals published by IOP. For more about producing LaTeX output for IOP journals, see <https://publishingsupport.iopscience.iop.org/questions/latex-template/>.
 
 ## Creating a New Article
 
 You can use this as a template to create an article for an IOP journal. To do this, use the following command:
 
 ```bash
-quarto use template quarto-journals/iop
+quarto use template sebdunnett/quarto-iop
 ```
 
 This will install the extension and create an example qmd file and bibiography that you can use as a starting place for your article.
 
 ## Installation For Existing Document
 
-You may also use this format with an existing Quarto project or document. From the quarto project or document directory, run the following command to install this format:
+You may also use this format with an existing Quarto project or document. From the Quarto project or document directory, run the following command to install this format:
 
 ```bash
-quarto install extension quarto-journals/iop
+quarto install extension sebdunnett/quarto-iop
 ```
 
 ## Usage
@@ -37,8 +37,21 @@ format:
     keep-tex: true    
 ```
 
-You can view a preview of the rendered template at <https://quarto-journals.github.io/article-format-template/>.
+You can view a preview of the rendered template at <https://sebdunnett.github.io/quarto-iop/>.
 
 ## Format Options
 
-This format does not have specific format option. Include documentation of such option otherwise. See <https://github.com/quarto-journals/elsevier#format-options> for an example.
+This format provides a number of custom YAML header options to control the PDF format:
+
+```yaml
+# set to true to use the orcidlink package to display linked orcid logos
+# beside authors on title page
+display-orcids: true
+# use journal macros set out in the IOP style guide
+# to add which journal an article is targetting
+# e.g. \ERL = Environmental Research Letters
+submitted-to: \ERL
+# test your article in two column form
+# NB: does not work well with code chunk outputs
+twocol: true
+```
