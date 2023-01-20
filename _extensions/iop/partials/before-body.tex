@@ -1,0 +1,37 @@
+$if(title)$
+\title[$if(short-title)$$short-title$$endif$]{$title$}
+$endif$
+
+$if(display-orcids)$
+\author{$for(by-author/allbutlast)$$it.name.literal$$$^$for(it.affiliations)$$it.number$$sep$$$$$^,$$$$^$endfor$$$$if(it.orcid)$\orcidlink{$it.orcid$}$endif$$sep$, $endfor$$for(by-author/last)$ and $it.name.literal$$$^$for(it.affiliations)$$it.number$$sep$,$endfor$$$$if(it.orcid)$\orcidlink{$it.orcid$}$endif$$endfor$}
+$else$
+\author{$for(by-author/allbutlast)$$it.name.literal$$$^$for(it.affiliations)$$it.number$$sep$$$$$^,$$$$^$endfor$$$$sep$, $endfor$$for(by-author/last)$ and $it.name.literal$$$^$for(it.affiliations)$$it.number$$sep$,$endfor$$$$endfor$}
+$endif$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$for(by-affiliation)$
+    \address{$$^$it.number$$$ $it.department$ $it.name$ $it.address$ $it.city$ $it.country$ $it.postal-code$}
+$endfor$
+
+$for(by-author)$
+$if(it.attributes.corresponding)$
+\ead{$it.email$}
+$endif$
+$endfor$
+
+$if(keywords)$
+\noindent{\it Keywords\/}: $keywords$
+$endif$
+
+$if(submitted-to)$
+\submitto{$submitted-to$}
+$endif$
+
+$if(twocol)$
+\ioptwocol
+$endif$
