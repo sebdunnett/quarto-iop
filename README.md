@@ -38,20 +38,3 @@ format:
 ```
 
 You can view a preview of the rendered template at <https://sebdunnett.github.io/quarto-iop/>.
-
-## Format Options
-
-This format provides a number of custom YAML header options to control the PDF format:
-
-```yaml
-# set to true to use the orcidlink package to display linked orcid logos
-# beside authors on title page
-display-orcids: true
-# use journal macros set out in the IOP style guide
-# to add which journal an article is targetting
-# e.g. \ERL = Environmental Research Letters
-submitted-to: \ERL
-# test your article in two column form
-# NB: does not work well with code chunk outputs
-twocol: true
-```
