@@ -120,15 +120,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul></li>
   <li><a href="#using-this-template" id="toc-using-this-template" class="nav-link" data-scroll-target="#using-this-template"><span class="toc-section-number">2</span>  Using this template</a>
   <ul class="collapse">
-  <li><a href="#format-options-and-differences-between-iop-html-and-iop-pdf" id="toc-format-options-and-differences-between-iop-html-and-iop-pdf" class="nav-link" data-scroll-target="#format-options-and-differences-between-iop-html-and-iop-pdf"><span class="toc-section-number">2.1</span>  Format options and differences between <code>iop-html</code> and <code>iop-pdf</code></a></li>
-  <li><a href="#sec-shortcode" id="toc-sec-shortcode" class="nav-link" data-scroll-target="#sec-shortcode"><span class="toc-section-number">2.2</span>  Shortcode demo</a></li>
-  <li><a href="#sec-chunks" id="toc-sec-chunks" class="nav-link" data-scroll-target="#sec-chunks"><span class="toc-section-number">2.3</span>  Code chunk</a></li>
-  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"><span class="toc-section-number">2.4</span>  Text color</a></li>
-  <li><a href="#using-references" id="toc-using-references" class="nav-link" data-scroll-target="#using-references">Using references</a></li>
-  <li><a href="#quick-maths" id="toc-quick-maths" class="nav-link" data-scroll-target="#quick-maths"><span class="toc-section-number">2.5</span>  Quick maths</a></li>
+  <li><a href="#sec-formopt" id="toc-sec-formopt" class="nav-link" data-scroll-target="#sec-formopt"><span class="toc-section-number">2.1</span>  Format options and differences between <code>iop-html</code> and <code>iop-pdf</code></a></li>
+  <li><a href="#iop-journal-and-format-options" id="toc-iop-journal-and-format-options" class="nav-link" data-scroll-target="#iop-journal-and-format-options"><span class="toc-section-number">2.2</span>  IOP journal and format options</a></li>
+  <li><a href="#sec-shortcode" id="toc-sec-shortcode" class="nav-link" data-scroll-target="#sec-shortcode"><span class="toc-section-number">2.3</span>  Shortcode demo</a></li>
+  <li><a href="#sec-chunks" id="toc-sec-chunks" class="nav-link" data-scroll-target="#sec-chunks"><span class="toc-section-number">2.4</span>  Code chunk</a></li>
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"><span class="toc-section-number">2.5</span>  Text color</a></li>
+  <li><a href="#using-references" id="toc-using-references" class="nav-link" data-scroll-target="#using-references"><span class="toc-section-number">2.6</span>  Using references</a></li>
+  <li><a href="#quick-maths" id="toc-quick-maths" class="nav-link" data-scroll-target="#quick-maths"><span class="toc-section-number">2.7</span>  Quick maths</a></li>
   </ul></li>
-  <li><a href="#sec-ack" id="toc-sec-ack" class="nav-link" data-scroll-target="#sec-ack"><span class="toc-section-number">3</span>  Acknowledgements</a></li>
-  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="toc-section-number">4</span>  Appendices</a></li>
+  <li><a href="#sec-ack" id="toc-sec-ack" class="nav-link" data-scroll-target="#sec-ack">Acknowledgements</a></li>
+  <li><a href="#labelling-and-position" id="toc-labelling-and-position" class="nav-link" data-scroll-target="#labelling-and-position"><span class="toc-section-number">3</span>  Labelling and position</a></li>
+  <li><a href="#for-only-one" id="toc-for-only-one" class="nav-link" data-scroll-target="#for-only-one"><span class="toc-section-number">4</span>  For only one</a></li>
   </ul>
 </nav>
 </div>
@@ -214,8 +216,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="using-this-template" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Using this template</h1>
-<section id="format-options-and-differences-between-iop-html-and-iop-pdf" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="format-options-and-differences-between-iop-html-and-iop-pdf"><span class="header-section-number">2.1</span> Format options and differences between <code>iop-html</code> and <code>iop-pdf</code></h2>
+<section id="sec-formopt" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-formopt"><span class="header-section-number">2.1</span> Format options and differences between <code>iop-html</code> and <code>iop-pdf</code></h2>
 <ul>
 <li>For the HTML format, we are using Pandoc citeproc to include the bibliography. Here <code>reference-section-title</code> controls the title for the chapter that will be used (although, specific to this template, we also use citeproc for the PDF to get Harvard style citations).</li>
 <li>For the PDF format, <code>natbib</code> is used by default and the bibliography is included with a title by the <span class="math inline">\(\LaTeX\)</span> template.</li>
@@ -241,8 +243,171 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">classoptions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For the most part, it <em>should not be necessary</em> to modify the <code>_extension.yml</code> file, except maybe to switch the referencing style for the HTML output.</p>
 </section>
-<section id="sec-shortcode" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">2.2</span> Shortcode demo</h2>
+<section id="iop-journal-and-format-options" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="iop-journal-and-format-options"><span class="header-section-number">2.2</span> IOP journal and format options</h2>
+<div id="tbl-macros" class="anchored">
+<table class="table">
+<caption>Table&nbsp;1: Journals to which this document applies, and macros for the abbreviated journal names.</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Short form of journal title</th>
+<th>Macro name</th>
+<th>Short form of journal title</th>
+<th>Macro name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2D Mater.</td>
+<td>\TDM</td>
+<td>Mater. Res. Express</td>
+<td>\MRE</td>
+</tr>
+<tr class="even">
+<td>Biofabrication</td>
+<td>\BF</td>
+<td>Meas. Sci. Technol.<sup>c</sup></td>
+<td>\MST</td>
+</tr>
+<tr class="odd">
+<td>Bioinspir. Biomim.</td>
+<td>\BB</td>
+<td>Methods Appl. Fluoresc.</td>
+<td>\MAF</td>
+</tr>
+<tr class="even">
+<td>Biomed. Mater.</td>
+<td>\BMM</td>
+<td>Modelling Simul. Mater. Sci. Eng.</td>
+<td>\MSMSE</td>
+</tr>
+<tr class="odd">
+<td>Class. Quantum Grav.</td>
+<td>\CQG</td>
+<td>Nucl. Fusion</td>
+<td>\NF</td>
+</tr>
+<tr class="even">
+<td>Comput. Sci. Disc.</td>
+<td>\CSD</td>
+<td>New J. Phys.</td>
+<td>\NJP</td>
+</tr>
+<tr class="odd">
+<td>Environ. Res. Lett.</td>
+<td>\ERL</td>
+<td>Nonlinearity<sup>a,b</sup></td>
+<td>\NL</td>
+</tr>
+<tr class="even">
+<td>Eur. J. Phys.</td>
+<td>\EJP</td>
+<td>Nanotechnology</td>
+<td>\NT</td>
+</tr>
+<tr class="odd">
+<td>Inverse Problems</td>
+<td>\IP</td>
+<td>Phys. Biol.<sup>c</sup></td>
+<td>\PB</td>
+</tr>
+<tr class="even">
+<td>J. Breath Res.</td>
+<td>\JBR</td>
+<td>Phys. Educ.<sup>a</sup></td>
+<td>\PED</td>
+</tr>
+<tr class="odd">
+<td>J. Geophys. Eng.<sup>d</sup></td>
+<td>\JGE</td>
+<td>Physiol. Meas.<sup>c,d,e</sup></td>
+<td>\PM</td>
+</tr>
+<tr class="even">
+<td>J. Micromech. Microeng.</td>
+<td>\JMM</td>
+<td>Phys. Med. Biol.<sup>c,d,e</sup></td>
+<td>\PMB</td>
+</tr>
+<tr class="odd">
+<td>J. Neural Eng.<sup>c</sup></td>
+<td>\JNE</td>
+<td>Plasma Phys. Control. Fusion</td>
+<td>\PPCF</td>
+</tr>
+<tr class="even">
+<td>J. Opt.</td>
+<td>\JOPT</td>
+<td>Phys. Scr.</td>
+<td>\PS</td>
+</tr>
+<tr class="odd">
+<td>J. Phys. A: Math. Theor.</td>
+<td>\jpa</td>
+<td>Plasma Sources Sci. Technol.</td>
+<td>\PSST</td>
+</tr>
+<tr class="even">
+<td>J. Phys. B: At. Mol. Opt. Phys.</td>
+<td>\jpb</td>
+<td>Rep.&nbsp;Prog. Phys.<sup>e</sup></td>
+<td>\RPP</td>
+</tr>
+<tr class="odd">
+<td>J. Phys: Condens. Matter</td>
+<td>\JPCM</td>
+<td>Semicond. Sci. Technol.</td>
+<td>\SST</td>
+</tr>
+<tr class="even">
+<td>J. Phys. D: Appl. Phys.</td>
+<td>\JPD</td>
+<td>Smart Mater. Struct.</td>
+<td>\SMS</td>
+</tr>
+<tr class="odd">
+<td>J. Phys. G: Nucl. Part. Phys.</td>
+<td>\jpg</td>
+<td>Supercond. Sci. Technol.</td>
+<td>\SUST</td>
+</tr>
+<tr class="even">
+<td>J. Radiol. Prot.<sup>a</sup></td>
+<td>\JRP</td>
+<td>Surf. Topogr.: Metrol. Prop.</td>
+<td>\STMP</td>
+</tr>
+<tr class="odd">
+<td>Metrologia</td>
+<td>\MET</td>
+<td>Transl. Mater. Res.</td>
+<td>\TMR</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><sup>a</sup>UK spelling is required; <sup>b</sup>MSC classification numbers are required; <sup>c</sup>titles of articles are required in journal references; <sup>d</sup>Harvard-style references must be used (see Section <a href="#sec-formopt">Section&nbsp;2.1</a>); <sup>e</sup>final page numbers of articles are required in journal references.</p>
+<p>This template has been written for the submission of an <em>article</em> to one of the journals laid out in <a href="#tbl-macros">Table&nbsp;1</a>. For other types of content for submission, the <code>\title</code> <span class="math inline">\(\LaTeX\)</span> control sequence on line 2 of <code>partials/before-body.tex</code> should be replaced with:</p>
+<ul>
+<li><code>\paper</code> for a paper;</li>
+<li><code>\letter</code> for a <em>Letter to the Editor</em>;</li>
+<li><code>\ftc</code> for a <em>Fast Track Communication</em>;</li>
+<li><code>\rapid</code> for a <em>Rapid Communication</em>;</li>
+<li><code>\comment</code> for a <em>Comment</em>;</li>
+<li><code>\topical</code> for a <em>Topical Review</em>;</li>
+<li><code>\review</code> for a review article;</li>
+<li><code>\note</code> for a <em>Note</em>; and</li>
+<li><code>\prelim</code> for a <em>Preliminary Communication</em></li>
+</ul>
+</section>
+<section id="sec-shortcode" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">2.3</span> Shortcode demo</h2>
 <p>PDF are rendered using <span class="math inline">\(\LaTeX\)</span> but it is best if one can use a Markdown syntax for cross format support.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{&lt; latex &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -255,8 +420,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div style="page-break-after: always;"></div>
 <p>…inserts a page break.</p>
 </section>
-<section id="sec-chunks" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="sec-chunks"><span class="header-section-number">2.3</span> Code chunk</h2>
+<section id="sec-chunks" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-chunks"><span class="header-section-number">2.4</span> Code chunk</h2>
 <p>This format hide chunks by default as option has been set in <code>_extension.yml</code> file.</p>
 <div class="cell">
 
@@ -275,19 +440,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="sec-summary" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">2.4</span> Text color</h2>
+<section id="sec-summary" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">2.5</span> Text color</h2>
 <p>Our format makes applying color on inline text possible using the <code>[content]{color=&lt;name&gt;}</code> syntax. Let’s see an example.</p>
 <p>Here we are using a special feature of our format which is the coloring because <span class="color-mypink">pink is a <strong>nice</strong> color</span>.</p>
 <p>This is possible thanks to the Lua Filter included in the custom extension format.</p>
 </section>
-<section id="using-references" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="using-references">Using references</h2>
+<section id="using-references" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="using-references"><span class="header-section-number">2.6</span> Using references</h2>
 <p>I did not read this book <span class="citation" data-cites="Brown2019">[@Brown2019]</span> – coded <code>[@Brown2019]</code> – but it must be interesting. We can add all references in the our bibliography file, even if not cited in text, with the following YAML code:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nocite</span><span class="kw">:</span><span class="at"> </span><span class="st">'@*'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="quick-maths" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="quick-maths"><span class="header-section-number">2.5</span> Quick maths</h2>
+<section id="quick-maths" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="quick-maths"><span class="header-section-number">2.7</span> Quick maths</h2>
 <p><span class="math inline">\(\LaTeX\)</span> and Quarto handle maths very well. This can be either inline, such as <span class="math inline">\(2 + 2 = 4\)</span> - 1 that’s 3, or display maths:</p>
 <p><span class="math display">\[
 P(e) - {n \choose k} p^k (2-p)^{n-k}
@@ -297,7 +462,6 @@ P(e) - {n \choose k} p^k (2-p)^{n-k}
 \alpha + \beta =\gamma^2, \label{eq1}\\
 \alpha^2 + 2\gamma + \cos\theta = \delta. \label{eq2}
 \end{eqnarray}\]</span></p>
-<div style="page-break-after: always;"></div>
 <p>Please note especially p2:</p>
 <blockquote class="blockquote">
 <p>“Also note that there is an incompatibility between amsmath.sty and iopart.cls which cannot be completely worked around. If your article relies on commands in amsmath.sty that are not available in iopart.cls, you may wish to consider using a different class file.”</p>
@@ -305,15 +469,17 @@ P(e) - {n \choose k} p^k (2-p)^{n-k}
 <p>In order to avoid package clashes in this template, lines 788-789 of <code>iopart.cls</code> were commented out.</p>
 </section>
 </section>
-<section id="sec-ack" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Acknowledgements</h1>
-<p>I thank the authors of previous article templates, from whom I mercilessly copied and pasted.</p>
+<section id="sec-ack" class="level1 unnumbered">
+<h1 class="unnumbered">Acknowledgements</h1>
+<p>IOP acknowledgements go here: after the last numbered section and before the appendices or references. Acknowledgement of funding should also be included here.</p>
 </section>
-<section id="appendices" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Appendices</h1>
-<p>Appendices must be labelled A, B, C etc. and placed here: after the <a href="#sec-ack">Acknowledgements</a> but before the bibliography.</p>
-<p>To do so, start with the <span class="math inline">\(\LaTeX\)</span> control sequence <code>\appendix</code>, followed by normal section headings <code># Appendix A</code>, <code># Appendix B</code>, etc.</p>
-<p>If the appendices contain numbered figures or equations, <code>\appendix</code> must be followed by <code>\setcounter{section}{1}</code>.</p>
+<section id="labelling-and-position" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Labelling and position</h1>
+<p>Appendices must be labelled A, B, C etc. and placed here: after the acknowledgements, before references. They must be proceeded with the <span class="math inline">\(\LaTeX\)</span> control sequence <code>\appendix</code>, followed by normal markdown section headings <code># Data</code>, <code># Tables</code>, etc.</p>
+</section>
+<section id="for-only-one" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> For only one</h1>
+<p>If you only require one appendix, simply use an unnumbered section heading, <code># Appendix {-}</code>. However, if the appendix requires numbered figures or equations, <code># Appendix {-}</code> must be preceded by <code>\appendix</code> and immediately followed on a new line by <code>\setcounter{section}{1}</code>.</p>
 </section>
 
 </main>
