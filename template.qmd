@@ -54,7 +54,7 @@ bibliography: bibliography.bib
 iop-vancouver: true # comment out for Harvard author year
 cite-method: natbib # comment out for Harvard author year
 reference-section-title: References
-classoption: [] #options separated by a comma
+classoption: [12pt] #options separated by a comma
 ---
 
 # Introduction
@@ -88,7 +88,7 @@ Basics of Quarto: <https://quarto.org/docs/guide/>.
 
 # Using this template
 
-## Format options and differences between `iop-html` and `iop-pdf`
+## Format options and differences between `iop-html` and `iop-pdf` {#sec-formopt}
 
 * For the HTML format, we are using Pandoc citeproc to include the bibliography. Here `reference-section-title` controls the title for the chapter that will be used (although, specific to this template, we also use citeproc for the PDF to get Harvard style citations).
 * For the PDF format, `natbib` is used by default and the bibliography is included with a title by the {{< latex >}} template.
@@ -117,6 +117,54 @@ classoptions: []
 ```
 
 For the most part, it *should not be necessary* to modify the `_extension.yml` file, except maybe to switch the referencing style for the HTML output.
+
+## IOP journal and format options
+
+
+| Short form of journal title | Macro name | Short form of journal title | Macro name |
+| ----------- | ----------- | ----------- | ----------- |
+| 2D Mater. | \\TDM | Mater. Res. Express | \\MRE |
+| Biofabrication | \\BF | Meas. Sci. Technol.^c^ | \\MST |
+| Bioinspir. Biomim. | \\BB | Methods Appl. Fluoresc. | \\MAF |
+| Biomed. Mater. | \\BMM | Modelling Simul. Mater. Sci. Eng. | \\MSMSE |
+| Class. Quantum Grav. | \\CQG | Nucl. Fusion | \\NF |
+| Comput. Sci. Disc. | \\CSD | New J. Phys. | \\NJP |
+| Environ. Res. Lett. | \\ERL | Nonlinearity^a,^^b^ | \\NL |
+| Eur. J. Phys. | \\EJP | Nanotechnology | \\NT |
+| Inverse Problems | \\IP | Phys. Biol.^c^ | \\PB |
+| J. Breath Res. | \\JBR | Phys. Educ.^a^ | \\PED |
+| J. Geophys. Eng.^d^ | \\JGE | Physiol. Meas.^c,^^d,^^e^ | \\PM |
+| J. Micromech. Microeng. | \\JMM | Phys. Med. Biol.^c,^^d,^^e^ | \\PMB |
+| J. Neural Eng.^c^ | \\JNE | Plasma Phys. Control. Fusion | \\PPCF |
+| J. Opt. | \\JOPT | Phys. Scr. | \\PS |
+| J. Phys. A: Math. Theor. | \\jpa | Plasma Sources Sci. Technol. | \\PSST |
+| J. Phys. B: At. Mol. Opt. Phys. | \\jpb | Rep. Prog. Phys.^e^ | \\RPP |
+| J. Phys: Condens. Matter | \\JPCM | Semicond. Sci. Technol. | \\SST |
+| J. Phys. D: Appl. Phys. | \\JPD | Smart Mater. Struct. | \\SMS |
+| J. Phys. G: Nucl. Part. Phys. | \\jpg | Supercond. Sci. Technol. | \\SUST |
+| J. Radiol. Prot.^a^ | \\JRP | Surf. Topogr.: Metrol. Prop. | \\STMP |
+| Metrologia | \\MET | Transl. Mater. Res. | \\TMR |
+
+: Journals to which this document applies, and macros for the abbreviated
+journal names. {#tbl-macros}
+
+^a^UK spelling is required;
+^b^MSC classification numbers are required;
+^c^titles of articles are required in journal references;
+^d^Harvard-style references must be used (see Section @sec-formopt);
+^e^final page numbers of articles are required in journal references.
+
+This template has been written for the submission of an _article_ to one of the journals laid out in @tbl-macros. For other types of content for submission, the `\title` {{< latex >}} control sequence on line 2 of `partials/before-body.tex` should be replaced with:
+
+* `\paper` for a paper;
+* `\letter` for a _Letter to the Editor_;
+* `\ftc` for a _Fast Track Communication_;
+* `\rapid` for a _Rapid Communication_;
+* `\comment` for a _Comment_;
+* `\topical` for a _Topical Review_;
+* `\review` for a review article;
+* `\note` for a _Note_; and
+* `\prelim` for a _Preliminary Communication_
 
 ## Shortcode demo {#sec-shortcode}
 
@@ -165,7 +213,7 @@ Here we are using a special feature of our format which is the coloring because 
 
 This is possible thanks to the Lua Filter included in the custom extension format.
 
-## Using references {-}
+## Using references
 
 I did not read this book [@Brown2019] -- coded `[@Brown2019]` -- but it must be interesting. We can add all references in the our bibliography file, even if not cited in text, with the following YAML code:
 
@@ -191,22 +239,22 @@ However, the `iopart.cls` handles equations differently; please see the IOP {{< 
 \alpha^2 + 2\gamma + \cos\theta = \delta. \label{eq2} 
 \end{eqnarray}
 
-{{< pagebreak >}}
-
 Please note especially p2: 
 
 >"Also note that there is an incompatibility between amsmath.sty and iopart.cls which cannot be completely worked around. If your article relies on commands in amsmath.sty that are not available in iopart.cls, you may wish to consider using a different class file."
 
 In order to avoid package clashes in this template, lines 788-789 of `iopart.cls` were commented out.
 
-# Acknowledgements {#sec-ack}
+# Acknowledgements {.unnumbered #sec-ack}
 
-I thank the authors of previous article templates, from whom I mercilessly copied and pasted.
+IOP acknowledgements go here: after the last numbered section and before the appendices or references. Acknowledgement of funding should also be included here.
 
-# Appendices
+\appendix
 
-Appendices must be labelled A, B, C etc. and placed here: after the [Acknowledgements] but before the bibliography.
+# Labelling and position
 
-To do so, start with the {{< latex >}} control sequence `\appendix`, followed by normal section headings `# Appendix A`, `# Appendix B`, etc.
+Appendices must be labelled A, B, C etc. and placed here: after the acknowledgements, before references. They must be proceeded with the {{< latex >}} control sequence `\appendix`, followed by normal markdown section headings `# Data`, `# Tables`, etc.
 
-If the appendices contain numbered figures or equations, `\appendix` must be followed by `\setcounter{section}{1}`.
+# For only one
+
+If you only require one appendix, simply use an unnumbered section heading, `# Appendix {-}`. However, if the appendix requires numbered figures or equations, `# Appendix {-}` must be preceded by `\appendix` and immediately followed on a new line by `\setcounter{section}{1}`.

@@ -8,14 +8,8 @@ $else$
 \author{$for(by-author/allbutlast)$$it.name.literal$$$^$for(it.affiliations)$$it.number$$sep$$$$$^,$$$$^$endfor$$$$sep$, $endfor$$for(by-author/last)$ and $it.name.literal$$$^$for(it.affiliations)$$it.number$$sep$,$endfor$$$$endfor$}
 $endif$
 
-$if(abstract)$
-\begin{abstract}
-$abstract$
-\end{abstract}
-$endif$
-
 $for(by-affiliation)$
-    \address{$$^$it.number$$$ $it.department$ $it.name$ $it.address$ $it.city$ $it.country$ $it.postal-code$}
+    \address{$$^$it.number$$$ $it.department$, $it.name$, $it.address$, $it.city$, $it.country$ $it.postal-code$}
 $endfor$
 
 $for(by-author)$
@@ -23,6 +17,12 @@ $if(it.attributes.corresponding)$
 \ead{$it.email$}
 $endif$
 $endfor$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
 
 $if(keywords)$
 \noindent{\it Keywords\/}: $keywords$
