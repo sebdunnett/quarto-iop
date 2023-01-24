@@ -249,10 +249,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <table class="table">
 <caption>Table&nbsp;1: Journals to which this document applies, and macros for the abbreviated journal names.</caption>
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 40%">
+<col style="width: 10%">
+<col style="width: 40%">
+<col style="width: 10%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -410,12 +410,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 data-number="2.3" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">2.3</span> Shortcode demo</h2>
 <p>PDF are rendered using <span class="math inline">\(\LaTeX\)</span> but it is best if one can use a Markdown syntax for cross format support.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{&lt; latex &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{&lt; latex &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>used in source is a shortcode syntax where the shortcode is included in the extension folder <code>_extensions</code>.</p>
 <p>Alternatively, Quarto supports a <a href="https://quarto.org/docs/extensions/shortcodes.html">number of shortcodes</a> natively. For example,</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div style="page-break-after: always;"></div>
 <p>…inserts a page break.</p>
@@ -449,24 +449,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="using-references" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="using-references"><span class="header-section-number">2.6</span> Using references</h2>
 <p>I did not read this book <span class="citation" data-cites="Brown2019">[@Brown2019]</span> – coded <code>[@Brown2019]</code> – but it must be interesting. We can add all references in the our bibliography file, even if not cited in text, with the following YAML code:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nocite</span><span class="kw">:</span><span class="at"> </span><span class="st">'@*'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nocite</span><span class="kw">:</span><span class="at"> </span><span class="st">'@*'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="quick-maths" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="quick-maths"><span class="header-section-number">2.7</span> Quick maths</h2>
-<p><span class="math inline">\(\LaTeX\)</span> and Quarto handle maths very well. This can be either inline, such as <span class="math inline">\(2 + 2 = 4\)</span> - 1 that’s 3, or display maths:</p>
-<p><span class="math display">\[
+<p>Two plus two is four, minus one that’s three – quick maths.</p>
+<p><span class="math inline">\(\LaTeX\)</span> and Quarto handle maths very well. This can be either inline, such as <span class="math inline">\(E = mc^{2}\)</span>, or display maths like <a href="#eq-demo">Equation&nbsp;1</a> and <a href="#eq-demo2">Equation&nbsp;2</a> below:</p>
+<p><span id="eq-demo"><span class="math display">\[
 P(e) - {n \choose k} p^k (2-p)^{n-k}
-\]</span></p>
-<p>However, the <code>iopart.cls</code> handles equations differently; please see the IOP <span class="math inline">\(\LaTeX\)</span> style guide for how to format numbered equations as below.</p>
-<p><span class="math display">\[\begin{eqnarray}
-\alpha + \beta =\gamma^2, \label{eq1}\\
-\alpha^2 + 2\gamma + \cos\theta = \delta. \label{eq2}
-\end{eqnarray}\]</span></p>
-<p>Please note especially p2:</p>
+\tag{1}\]</span></span></p>
+<p><span id="eq-demo2"><span class="math display">\[
+\frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2} \mathrm S^{2}
+\frac{\partial^{2} \mathrm C}{\partial \mathrm C^2}
+  + \mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\ =
+  \mathrm r \mathrm C
+\tag{2}\]</span></span></p>
+<p>Please see the IOP <span class="math inline">\(\LaTeX\)</span> style guide for more about mathematical equations, noting specifically p2:</p>
 <blockquote class="blockquote">
 <p>“Also note that there is an incompatibility between amsmath.sty and iopart.cls which cannot be completely worked around. If your article relies on commands in amsmath.sty that are not available in iopart.cls, you may wish to consider using a different class file.”</p>
 </blockquote>
 <p>In order to avoid package clashes in this template, lines 788-789 of <code>iopart.cls</code> were commented out.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">A comic book cover of the publishing company IOP Publishing reimagined as a terrifying monster</figcaption><p></p>
+</figure>
+</div>
 </section>
 </section>
 <section id="sec-ack" class="level1 unnumbered">
