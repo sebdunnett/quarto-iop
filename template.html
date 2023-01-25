@@ -129,8 +129,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#quick-maths" id="toc-quick-maths" class="nav-link" data-scroll-target="#quick-maths"><span class="toc-section-number">2.7</span>  Quick maths</a></li>
   </ul></li>
   <li><a href="#sec-ack" id="toc-sec-ack" class="nav-link" data-scroll-target="#sec-ack">Acknowledgements</a></li>
-  <li><a href="#labelling-and-position" id="toc-labelling-and-position" class="nav-link" data-scroll-target="#labelling-and-position"><span class="toc-section-number">3</span>  Labelling and position</a></li>
-  <li><a href="#for-only-one" id="toc-for-only-one" class="nav-link" data-scroll-target="#for-only-one"><span class="toc-section-number">4</span>  For only one</a></li>
   </ul>
 </nav>
 </div>
@@ -239,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">cite-method</span><span class="kw">:</span><span class="at"> natbib</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># see iopart.cls for option source code</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># possible options (separate with comma):</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># a4paper,letterpaper,10pt,12pt,draft,final,titlepage,notitlepage</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># a4paper, letterpaper, 10pt, 12pt, draft, final</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">classoptions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For the most part, it <em>should not be necessary</em> to modify the <code>_extension.yml</code> file, except maybe to switch the referencing style for the HTML output.</p>
 </section>
@@ -450,7 +448,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 data-number="2.6" class="anchored" data-anchor-id="using-references"><span class="header-section-number">2.6</span> Using references</h2>
 <p>I did not read this book <span class="citation" data-cites="Brown2019">[@Brown2019]</span> – coded <code>[@Brown2019]</code> – but it must be interesting. We can add all references in the our bibliography file, even if not cited in text, with the following YAML code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nocite</span><span class="kw">:</span><span class="at"> </span><span class="st">'@*'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nocite</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  '@*'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="quick-maths" class="level2" data-number="2.7">
@@ -474,7 +473,7 @@ P(e) - {n \choose k} p^k (2-p)^{n-k}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="fig.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">A comic book cover of the publishing company IOP Publishing reimagined as a terrifying monster</figcaption><p></p>
+<p></p><figcaption class="figure-caption">A comic book cover of the publishing company IOP Publishing reimagined as a terrifying monster.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -482,14 +481,6 @@ P(e) - {n \choose k} p^k (2-p)^{n-k}
 <section id="sec-ack" class="level1 unnumbered">
 <h1 class="unnumbered">Acknowledgements</h1>
 <p>IOP acknowledgements go here: after the last numbered section and before the appendices or references. Acknowledgement of funding should also be included here.</p>
-</section>
-<section id="labelling-and-position" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Labelling and position</h1>
-<p>Appendices must be labelled A, B, C etc. and placed here: after the acknowledgements, before references. They must be proceeded with the <span class="math inline">\(\LaTeX\)</span> control sequence <code>\appendix</code>, followed by normal markdown section headings <code># Data</code>, <code># Tables</code>, etc.</p>
-</section>
-<section id="for-only-one" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> For only one</h1>
-<p>If you only require one appendix, simply use an unnumbered section heading, <code># Appendix {-}</code>. However, if the appendix requires numbered figures or equations, <code># Appendix {-}</code> must be preceded by <code>\appendix</code> and immediately followed on a new line by <code>\setcounter{section}{1}</code>.</p>
 </section>
 
 </main>
