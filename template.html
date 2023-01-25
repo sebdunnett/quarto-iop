@@ -87,6 +87,25 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -129,6 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#quick-maths" id="toc-quick-maths" class="nav-link" data-scroll-target="#quick-maths"><span class="toc-section-number">2.7</span>  Quick maths</a></li>
   </ul></li>
   <li><a href="#sec-ack" id="toc-sec-ack" class="nav-link" data-scroll-target="#sec-ack">Acknowledgements</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 </nav>
 </div>
@@ -446,7 +466,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="using-references" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="using-references"><span class="header-section-number">2.6</span> Using references</h2>
-<p>I did not read this book <span class="citation" data-cites="Brown2019">[@Brown2019]</span> – coded <code>[@Brown2019]</code> – but it must be interesting. We can add all references in the our bibliography file, even if not cited in text, with the following YAML code:</p>
+<p>I did not read this book <span class="citation" data-cites="Brown2019">[<a href="#ref-Brown2019" role="doc-biblioref">1</a>]</span> – coded <code>[@Brown2019]</code> – but it must be interesting. We can add all references in the our bibliography file, even if not cited in text, with the following YAML code:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nocite</span><span class="kw">: </span><span class="ch">|</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  '@*'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -482,8 +502,28 @@ P(e) - {n \choose k} p^k (2-p)^{n-k}
 <h1 class="unnumbered">Acknowledgements</h1>
 <p>IOP acknowledgements go here: after the last numbered section and before the appendices or references. Acknowledgement of funding should also be included here.</p>
 </section>
+<section id="bibliography" class="level1 unnumbered">
 
-</main>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-Brown2019" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Brown T 2019 <em>Deforestation and its impact on global climate change</em> (Anytown, UK: University Press)</div>
+</div>
+<div id="ref-Smith2022" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Smith J 2022 The impact of human activity on biodiversity loss <em>Journal of Environmental Science</em> <strong>55</strong> 123–38</div>
+</div>
+<div id="ref-Doe2021" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Doe J 2021 Ecosystem management strategies for climate change adaptation <em>Nature Climate Change</em> <strong>11</strong> 567–76</div>
+</div>
+<div id="ref-Johnson2020" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Johnson M 2020 Renewable energy and carbon sequestration: Solutions for the ecological emergency <em>Annual Review of Energy and the Environment</em> <strong>45</strong> 98–121</div>
+</div>
+<div id="ref-Davis2018" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Davis K 2018 Biodiversity conservation in the 21st century: Challenges and opportunities <em>Annual Review of Ecology, Evolution, and Systematics</em> <strong>49</strong> 1–23</div>
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
