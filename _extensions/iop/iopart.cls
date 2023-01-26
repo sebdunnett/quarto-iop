@@ -46,7 +46,7 @@
 \DeclareOption{12pt}{\renewcommand\@ptsize{2}}
 \DeclareOption{draft}{\setlength\overfullrule{5pt}}
 \DeclareOption{final}{\setlength\overfullrule{0pt}}
-\DeclareOption{titlepage}{\@titlepagetrue}
+%\DeclareOption{titlepage}{\@titlepagetrue}
 \DeclareOption{notitlepage}{\@titlepagefalse}
 \ExecuteOptions{letterpaper,final}
 \ProcessOptions

@@ -1,10 +1,7 @@
 ---
 title: So you want to publish in IOP? Here's a template for you.
 short-title: IOP Template Format
-format:
-  iop-pdf:
-    keep-tex: true
-  iop-html: default
+titlepage: true
 author:
 - name: John Smith
   affiliations:
@@ -47,12 +44,21 @@ author:
 display-orcids: true
 abstract: |
   The ecological emergency refers to the current state of the global environment, characterized by unprecedented declines in biodiversity, rapid loss of natural habitats, and increasing frequency of extreme weather events. The root cause of the ecological emergency is human activity, specifically the overconsumption of resources and the release of greenhouse gases. The situation is dire, with scientists warning that up to one million species are at risk of extinction due to human activities. The ecological emergency also poses a threat to human well-being as it disrupts the provision of vital ecosystem services such as air and water purification, pollination, and climate regulation. The time to act is now, as the window of opportunity to prevent the worst outcomes of the ecological emergency is rapidly closing. It is crucial that immediate and ambitious actions are taken at the global, national, and local levels to reduce greenhouse gas emissions, protect biodiversity, and restore natural habitats. This requires a transformation of our economic and societal systems towards sustainability.
-keywords: extinction, deforestation, species, breakdown, survival
+keywords:
+  - extinction
+  - deforestation
+  - species
+  - breakdown
+  - survival
 submitted-to: \ERL
-twocol: false
-bibliography: bibliography.bib
+twocol: false # does not deal well with code outputs
+format:
+  iop-pdf:
+    keep-tex: true
+    cite-method: natbib # comment out for Harvard author year
+  iop-html: default
 iop-vancouver: true # comment out for Harvard author year
-cite-method: natbib # comment out for Harvard author year
+bibliography: bibliography.bib
 reference-section-title: References
 classoption: [12pt] #options separated by a comma
 ---
@@ -78,7 +84,7 @@ Markdown is a versatile and flexible language, and there are many more elements 
 
 For more "official" guidance: <https://quarto.org/docs/authoring/markdown-basics.html>.
 
-## And what about the basics of Quarto?
+## And what about the basics of Quarto? {#sec-quarto-basics}
 
 Quarto is a strategy board game for two players. It was invented by Swiss mathematician Blaise Müller...
 
@@ -96,8 +102,11 @@ Basics of Quarto: <https://quarto.org/docs/guide/>.
 This format provides a number of custom YAML header options to control the PDF format:
 
 ```yaml
-# set to true to use the orcidlink package to display linked orcid logos
-# beside authors on title page
+# replaces titlepage class option
+titlepage: true
+# set to true to use the orcidlink package
+# to display linked orcid logos
+# not required by IOP but fancy...
 display-orcids: true
 # use journal macros set out in the IOP style guide
 # to add which journal an article is targeting
@@ -107,12 +116,14 @@ submitted-to: \ERL
 # NB: does not work well with code chunk outputs
 twocol: true
 # sets Vancouver numeric citation style
-# comment out both iop-vancouver and cite-method for Harvard author year citation style
+# comment out both iop-vancouver and cite-method
+# for Harvard author year citation style
 iop-vancouver: true
-cite-method: natbib
+iop-pdf:
+  cite-method: natbib
 # see iopart.cls for option source code
 # possible options (separate with comma):
-# a4paper,letterpaper,10pt,12pt,draft,final,titlepage,notitlepage
+# a4paper, letterpaper, 10pt, 12pt, draft, final
 classoptions: []
 ```
 
@@ -120,29 +131,29 @@ For the most part, it *should not be necessary* to modify the `_extension.yml` f
 
 ## IOP journal and format options
 
-| Short form of journal title | Macro name | Short form of journal title | Macro name |
-| ----------- | ----------- | ----------- | ----------- |
-| 2D Mater. | \\TDM | Mater. Res. Express | \\MRE |
-| Biofabrication | \\BF | Meas. Sci. Technol.^c^ | \\MST |
-| Bioinspir. Biomim. | \\BB | Methods Appl. Fluoresc. | \\MAF |
-| Biomed. Mater. | \\BMM | Modelling Simul. Mater. Sci. Eng. | \\MSMSE |
-| Class. Quantum Grav. | \\CQG | Nucl. Fusion | \\NF |
-| Comput. Sci. Disc. | \\CSD | New J. Phys. | \\NJP |
-| Environ. Res. Lett. | \\ERL | Nonlinearity^a,^^b^ | \\NL |
-| Eur. J. Phys. | \\EJP | Nanotechnology | \\NT |
-| Inverse Problems | \\IP | Phys. Biol.^c^ | \\PB |
-| J. Breath Res. | \\JBR | Phys. Educ.^a^ | \\PED |
-| J. Geophys. Eng.^d^ | \\JGE | Physiol. Meas.^c,^^d,^^e^ | \\PM |
-| J. Micromech. Microeng. | \\JMM | Phys. Med. Biol.^c,^^d,^^e^ | \\PMB |
-| J. Neural Eng.^c^ | \\JNE | Plasma Phys. Control. Fusion | \\PPCF |
-| J. Opt. | \\JOPT | Phys. Scr. | \\PS |
-| J. Phys. A: Math. Theor. | \\jpa | Plasma Sources Sci. Technol. | \\PSST |
-| J. Phys. B: At. Mol. Opt. Phys. | \\jpb | Rep. Prog. Phys.^e^ | \\RPP |
-| J. Phys: Condens. Matter | \\JPCM | Semicond. Sci. Technol. | \\SST |
-| J. Phys. D: Appl. Phys. | \\JPD | Smart Mater. Struct. | \\SMS |
-| J. Phys. G: Nucl. Part. Phys. | \\jpg | Supercond. Sci. Technol. | \\SUST |
-| J. Radiol. Prot.^a^ | \\JRP | Surf. Topogr.: Metrol. Prop. | \\STMP |
-| Metrologia | \\MET | Transl. Mater. Res. | \\TMR |
+| Short form of journal title     | Macro name | Short form of journal title       | Macro name |
+| ------------------------------- | ---------- | --------------------------------- | ---------- |
+| 2D Mater.                       | \\TDM      | Mater. Res. Express               | \\MRE      |
+| Biofabrication                  | \\BF       | Meas. Sci. Technol.^c^            | \\MST      |
+| Bioinspir. Biomim.              | \\BB       | Methods Appl. Fluoresc.           | \\MAF      |
+| Biomed. Mater.                  | \\BMM      | Modelling Simul. Mater. Sci. Eng. | \\MSMSE    |
+| Class. Quantum Grav.            | \\CQG      | Nucl. Fusion                      | \\NF       |
+| Comput. Sci. Disc.              | \\CSD      | New J. Phys.                      | \\NJP      |
+| Environ. Res. Lett.             | \\ERL      | Nonlinearity^a,^^b^               | \\NL       |
+| Eur. J. Phys.                   | \\EJP      | Nanotechnology                    | \\NT       |
+| Inverse Problems                | \\IP       | Phys. Biol.^c^                    | \\PB       |
+| J. Breath Res.                  | \\JBR      | Phys. Educ.^a^                    | \\PED      |
+| J. Geophys. Eng.^d^             | \\JGE      | Physiol. Meas.^c,^^d,^^e^         | \\PM       |
+| J. Micromech. Microeng.         | \\JMM      | Phys. Med. Biol.^c,^^d,^^e^       | \\PMB      |
+| J. Neural Eng.^c^               | \\JNE      | Plasma Phys. Control. Fusion      | \\PPCF     |
+| J. Opt.                         | \\JOPT     | Phys. Scr.                        | \\PS       |
+| J. Phys. A: Math. Theor.        | \\jpa      | Plasma Sources Sci. Technol.      | \\PSST     |
+| J. Phys. B: At. Mol. Opt. Phys. | \\jpb      | Rep. Prog. Phys.^e^               | \\RPP      |
+| J. Phys: Condens. Matter        | \\JPCM     | Semicond. Sci. Technol.           | \\SST      |
+| J. Phys. D: Appl. Phys.         | \\JPD      | Smart Mater. Struct.              | \\SMS      |
+| J. Phys. G: Nucl. Part. Phys.   | \\jpg      | Supercond. Sci. Technol.          | \\SUST     |
+| J. Radiol. Prot.^a^             | \\JRP      | Surf. Topogr.: Metrol. Prop.      | \\STMP     |
+| Metrologia                      | \\MET      | Transl. Mater. Res.               | \\TMR      |
 
 : Journals to which this document applies, and macros for the abbreviated
 journal names. {#tbl-macros}{tbl-colwidths="[40,10,40,10]"}
@@ -217,8 +228,14 @@ I did not read this book [@Brown2019] -- coded `[@Brown2019]` -- but it must be 
 
 ```{yaml}
 #| echo: true
-nocite: '@*'
+nocite: |
+  '@*'
 ```
+
+---
+nocite: |
+  @*
+---
 
 ## Quick maths
 
@@ -243,11 +260,19 @@ Please see the IOP {{< latex >}} style guide for more about mathematical equatio
 
 In order to avoid package clashes in this template, lines 788-789 of `iopart.cls` were commented out.
 
-![A comic book cover of the publishing company IOP Publishing reimagined as a terrifying monster](fig.png)
+## Figures
+
+Figures can be included as normal using markdown syntax:
+
+![A comic book cover of the publishing company IOP Publishing reimagined as a terrifying monster.](fig.png)
+
+See the link in @sec-quarto-basics for more on figure embedding. For IOP, figures can be included in the body of the text or grouped together at the end of the document, although the former requires less fiddling using this template.
 
 # Acknowledgements {.unnumbered #sec-ack}
 
 IOP acknowledgements go here: after the last numbered section and before the appendices or references. Acknowledgement of funding should also be included here.
+
+::: {.content-hidden unless-format="pdf"}
 
 \appendix
 
@@ -258,3 +283,5 @@ Appendices must be labelled A, B, C etc. and placed here: after the acknowledgem
 # For only one
 
 If you only require one appendix, simply use an unnumbered section heading, `# Appendix {-}`. However, if the appendix requires numbered figures or equations, `# Appendix {-}` must be preceded by `\appendix` and immediately followed on a new line by `\setcounter{section}{1}`.
+
+:::

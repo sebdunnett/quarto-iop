@@ -32,9 +32,8 @@ or in your document yaml
 
 ```yaml
 format:
-  pdf: default
   iop-pdf:
     keep-tex: true    
 ```
 
-You can view a preview of the rendered template at <https://sebdunnett.github.io/quarto-iop/>.
+You can view a preview of the template rendered as PDF at <https://sebdunnett.github.io/quarto-iop/>.

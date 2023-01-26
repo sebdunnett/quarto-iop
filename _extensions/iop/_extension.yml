@@ -4,37 +4,31 @@ version: 0.1.0
 contributes:
   formats:
     common:
-      # define below YAML configuration common to all formats
       filters:
-        # You can include here Lua filters from your extension format 
         - color-text.lua
       shortcodes:
-        # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua
       knitr:
         opts_chunk:
           echo: false
       number-sections: true
     pdf:
-      # define default configuration for the pdf version of your format
       documentclass: iopart
-      colorlinks: true
-      urlcolor: red
+      colorlinks: false
+      #urlcolor: red
       fig-width: 6.5
       fig-height: 4.5
-      # Set this below (`biblio-config: false`) if your cls already load a bst file
       biblio-config: false
-      # Content to add in header that your format is using
       header-includes: |
         \usepackage{orcidlink}
         \definecolor{mypink}{RGB}{219, 48, 122}
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
       template-partials:
-        - "partials/pandoc.tex"
         - "partials/doc-class.tex"
         - "partials/before-body.tex"
         - "partials/title.tex"
       format-resources:
-        # Add here the resources required for the PDF rendering
         - iopart.cls
         - iopams.sty
         - iopart10.clo
@@ -44,10 +38,8 @@ contributes:
         - iopart-num.bst
         - jphysicsB.bst
     html:
-      # define default configuration for the html version of your format
       toc: true
       theme: custom.scss
-      # Use a CSL file to style (https://www.zotero.org/styles/)
       # numeric
       csl: https://www.zotero.org/styles/institute-of-physics-numeric
       # harvard

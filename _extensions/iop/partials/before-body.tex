@@ -1,3 +1,5 @@
+$-- Code to include title page content: authors, affiliations, abstract, etc.
+
 $if(title)$
 \title[$if(short-title)$$short-title$$endif$]{$title$}
 $endif$
@@ -25,13 +27,43 @@ $abstract$
 $endif$
 
 $if(keywords)$
-\noindent{\it Keywords\/}: $keywords$
+\noindent{\it Keywords\/}: $for(keywords)$$keywords$$sep$, $endfor$
 $endif$
 
 $if(submitted-to)$
 \submitto{$submitted-to$}
 $endif$
 
+$if(titlepage)$
+\maketitle
+$else$
+$endif$
+
 $if(twocol)$
+$if(titlepage)$
+$else$
+\maketitle
+$endif$
+
 \ioptwocol
+
+\makeatletter
+\let\oldlt\longtable
+\let\endoldlt\endlongtable
+\def\longtable{\@ifnextchar[\longtable@i \longtable@ii}
+\def\longtable@i[#1]{\begin{figure}[t]
+\onecolumn
+\begin{minipage}{0.5\textwidth}
+\oldlt[#1]
+}
+\def\longtable@ii{\begin{figure}[t]
+\onecolumn
+\begin{minipage}{0.5\textwidth}
+\oldlt
+}
+\def\endlongtable{\endoldlt
+\end{minipage}
+\twocolumn
+\end{figure}}
+\makeatother
 $endif$
