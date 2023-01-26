@@ -135,7 +135,7 @@ div.csl-indent {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">1</span>  Introduction</a>
   <ul class="collapse">
   <li><a href="#chatgpt-what-are-the-basics-of-markdown" id="toc-chatgpt-what-are-the-basics-of-markdown" class="nav-link" data-scroll-target="#chatgpt-what-are-the-basics-of-markdown"><span class="toc-section-number">1.1</span>  ChatGPT, what are the basics of markdown?</a></li>
-  <li><a href="#and-what-about-the-basics-of-quarto" id="toc-and-what-about-the-basics-of-quarto" class="nav-link" data-scroll-target="#and-what-about-the-basics-of-quarto"><span class="toc-section-number">1.2</span>  And what about the basics of Quarto?</a></li>
+  <li><a href="#sec-quarto-basics" id="toc-sec-quarto-basics" class="nav-link" data-scroll-target="#sec-quarto-basics"><span class="toc-section-number">1.2</span>  And what about the basics of Quarto?</a></li>
   </ul></li>
   <li><a href="#using-this-template" id="toc-using-this-template" class="nav-link" data-scroll-target="#using-this-template"><span class="toc-section-number">2</span>  Using this template</a>
   <ul class="collapse">
@@ -146,6 +146,7 @@ div.csl-indent {
   <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"><span class="toc-section-number">2.5</span>  Text color</a></li>
   <li><a href="#using-references" id="toc-using-references" class="nav-link" data-scroll-target="#using-references"><span class="toc-section-number">2.6</span>  Using references</a></li>
   <li><a href="#quick-maths" id="toc-quick-maths" class="nav-link" data-scroll-target="#quick-maths"><span class="toc-section-number">2.7</span>  Quick maths</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures"><span class="toc-section-number">2.8</span>  Figures</a></li>
   </ul></li>
   <li><a href="#sec-ack" id="toc-sec-ack" class="nav-link" data-scroll-target="#sec-ack">Acknowledgements</a></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
@@ -225,8 +226,8 @@ div.csl-indent {
 <p>Markdown is a versatile and flexible language, and there are many more elements you can add, but these are the basics to get you started. Additionally, there are different flavors of markdown, so some elements may vary depending on the implementation.</p>
 <p>For more “official” guidance: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a>.</p>
 </section>
-<section id="and-what-about-the-basics-of-quarto" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="and-what-about-the-basics-of-quarto"><span class="header-section-number">1.2</span> And what about the basics of Quarto?</h2>
+<section id="sec-quarto-basics" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-quarto-basics"><span class="header-section-number">1.2</span> And what about the basics of Quarto?</h2>
 <p>Quarto is a strategy board game for two players. It was invented by Swiss mathematician Blaise Müller…</p>
 <p>..I’m going to stop you there.</p>
 <p>Basics of Quarto: <a href="https://quarto.org/docs/guide/" class="uri">https://quarto.org/docs/guide/</a>.</p>
@@ -241,24 +242,29 @@ div.csl-indent {
 <li>For the PDF format, <code>natbib</code> is used by default and the bibliography is included with a title by the <span class="math inline">\(\LaTeX\)</span> template.</li>
 </ul>
 <p>This format provides a number of custom YAML header options to control the PDF format:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set to true to use the orcidlink package to display linked orcid logos</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># beside authors on title page</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">display-orcids</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># use journal macros set out in the IOP style guide</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># to add which journal an article is targeting</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># e.g. \ERL = Environmental Research Letters</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">submitted-to</span><span class="kw">:</span><span class="at"> \ERL</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># test your article in two column form</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># NB: does not work well with code chunk outputs</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">twocol</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># sets Vancouver numeric citation style</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># comment out both iop-vancouver and cite-method for Harvard author year citation style</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">iop-vancouver</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">cite-method</span><span class="kw">:</span><span class="at"> natbib</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># see iopart.cls for option source code</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># possible options (separate with comma):</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># a4paper, letterpaper, 10pt, 12pt, draft, final</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">classoptions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># replaces titlepage class option</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">titlepage</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># set to true to use the orcidlink package</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># to display linked orcid logos</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># not required by IOP but fancy...</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">display-orcids</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># use journal macros set out in the IOP style guide</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># to add which journal an article is targeting</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># e.g. \ERL = Environmental Research Letters</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">submitted-to</span><span class="kw">:</span><span class="at"> \ERL</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># test your article in two column form</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># NB: does not work well with code chunk outputs</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">twocol</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># sets Vancouver numeric citation style</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># comment out both iop-vancouver and cite-method</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># for Harvard author year citation style</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">iop-vancouver</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">iop-pdf</span><span class="kw">:</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cite-method</span><span class="kw">:</span><span class="at"> natbib</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># see iopart.cls for option source code</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># possible options (separate with comma):</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># a4paper, letterpaper, 10pt, 12pt, draft, final</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">classoptions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For the most part, it <em>should not be necessary</em> to modify the <code>_extension.yml</code> file, except maybe to switch the referencing style for the HTML output.</p>
 </section>
 <section id="iop-journal-and-format-options" class="level2" data-number="2.2">
@@ -490,12 +496,17 @@ P(e) - {n \choose k} p^k (2-p)^{n-k}
 <p>“Also note that there is an incompatibility between amsmath.sty and iopart.cls which cannot be completely worked around. If your article relies on commands in amsmath.sty that are not available in iopart.cls, you may wish to consider using a different class file.”</p>
 </blockquote>
 <p>In order to avoid package clashes in this template, lines 788-789 of <code>iopart.cls</code> were commented out.</p>
+</section>
+<section id="figures" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="figures"><span class="header-section-number">2.8</span> Figures</h2>
+<p>Figures can be included as normal using markdown syntax:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="fig.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">A comic book cover of the publishing company IOP Publishing reimagined as a terrifying monster.</figcaption><p></p>
 </figure>
 </div>
+<p>See the link in <a href="#sec-quarto-basics">Section&nbsp;1.2</a> for more on figure embedding. For IOP, figures can be included in the body of the text or grouped together at the end of the document, although the former requires less fiddling using this template.</p>
 </section>
 </section>
 <section id="sec-ack" class="level1 unnumbered">
