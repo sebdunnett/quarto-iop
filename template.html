@@ -146,9 +146,12 @@ div.csl-indent {
   <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"><span class="toc-section-number">2.5</span>  Text color</a></li>
   <li><a href="#using-references" id="toc-using-references" class="nav-link" data-scroll-target="#using-references"><span class="toc-section-number">2.6</span>  Using references</a></li>
   <li><a href="#quick-maths" id="toc-quick-maths" class="nav-link" data-scroll-target="#quick-maths"><span class="toc-section-number">2.7</span>  Quick maths</a></li>
-  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures"><span class="toc-section-number">2.8</span>  Figures</a></li>
+  <li><a href="#sec-figures" id="toc-sec-figures" class="nav-link" data-scroll-target="#sec-figures"><span class="toc-section-number">2.8</span>  Figures</a></li>
   </ul></li>
   <li><a href="#sec-ack" id="toc-sec-ack" class="nav-link" data-scroll-target="#sec-ack">Acknowledgements</a></li>
+  <li><a href="#adding-appendices" id="toc-adding-appendices" class="nav-link" data-scroll-target="#adding-appendices"><span class="toc-section-number">3</span>  Adding appendices</a></li>
+  <li><a href="#pdf-format" id="toc-pdf-format" class="nav-link" data-scroll-target="#pdf-format"><span class="toc-section-number">4</span>  PDF format</a></li>
+  <li><a href="#html-format" id="toc-html-format" class="nav-link" data-scroll-target="#html-format"><span class="toc-section-number">5</span>  HTML format</a></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 </nav>
@@ -433,14 +436,8 @@ div.csl-indent {
 <section id="sec-shortcode" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">2.3</span> Shortcode demo</h2>
 <p>PDF are rendered using <span class="math inline">\(\LaTeX\)</span> but it is best if one can use a Markdown syntax for cross format support.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{&lt; latex &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>used in source is a shortcode syntax where the shortcode is included in the extension folder <code>_extensions</code>.</p>
-<p>Alternatively, Quarto supports a <a href="https://quarto.org/docs/extensions/shortcodes.html">number of shortcodes</a> natively. For example,</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{{&lt; pagebreak &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>{{&lt; latex &gt;}} used in source is a shortcode syntax to print “LaTeX” in fancy text where the shortcode is included in the extension folder <code>_extensions</code>.</p>
+<p>Alternatively, Quarto supports a <a href="https://quarto.org/docs/extensions/shortcodes.html">number of shortcodes</a> natively. For example, {{&lt; pagebreak &gt;}}</p>
 <div style="page-break-after: always;"></div>
 <p>…inserts a page break.</p>
 </section>
@@ -452,7 +449,7 @@ div.csl-indent {
 </div>
 <p>But you can set <code>echo</code> option to <code>true</code> locally in the chunk</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 1          5.1         3.5          1.4         0.2  setosa
@@ -474,8 +471,8 @@ div.csl-indent {
 <h2 data-number="2.6" class="anchored" data-anchor-id="using-references"><span class="header-section-number">2.6</span> Using references</h2>
 <p>I did not read this book <span class="citation" data-cites="Brown2019">[<a href="#ref-Brown2019" role="doc-biblioref">1</a>]</span> – coded <code>[@Brown2019]</code> – but it must be interesting. We can add all references in the our bibliography file, even if not cited in text, with the following YAML code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nocite</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  '@*'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nocite</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  '@*'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="quick-maths" class="level2" data-number="2.7">
@@ -497,8 +494,8 @@ P(e) - {n \choose k} p^k (2-p)^{n-k}
 </blockquote>
 <p>In order to avoid package clashes in this template, lines 788-789 of <code>iopart.cls</code> were commented out.</p>
 </section>
-<section id="figures" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="figures"><span class="header-section-number">2.8</span> Figures</h2>
+<section id="sec-figures" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="sec-figures"><span class="header-section-number">2.8</span> Figures</h2>
 <p>Figures can be included as normal using markdown syntax:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -511,14 +508,29 @@ P(e) - {n \choose k} p^k (2-p)^{n-k}
 </section>
 <section id="sec-ack" class="level1 unnumbered">
 <h1 class="unnumbered">Acknowledgements</h1>
-<p>IOP acknowledgements go here: after the last numbered section and before the appendices or references. Acknowledgement of funding should also be included here.</p>
+<p>IOP acknowledgements go here: unnumbered, after the last numbered section and before the appendices or references. Acknowledgement of funding should also be included here.</p>
 </section>
+<section id="adding-appendices" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Adding appendices</h1>
+<p>The shortcodes {{&lt; appendix &gt;}} and {{&lt; appendices &gt;}} have been added for convenience. Appendices must be labelled A, B, C etc. and placed here: after the acknowledgements, before references.</p>
+</section>
+
+
 <section id="bibliography" class="level1 unnumbered">
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="quarto-appendix" class="default"><section id="pdf-format" class="level1 appendix" data-number="4"><h2 class="quarto-appendix-heading"><span class="header-section-number">4</span> PDF format</h2><div class="quarto-appendix-contents">
+
+<p>For only one appendix, {{&lt; appendix &gt;}} inserts the section heading “Appendix”, and resets numbering so any equations and figures are correctly numbered. For more than one appendix (as here), {{&lt; appendices &gt;}} can be used: it will open the <span class="math inline">\(\LaTeX\)</span> <code>\appendix</code> environment, allowing use of normal markdown section headers for each appendix: <code># Data</code>, <code># Tables</code>, etc.</p>
+<p><span id="eq-app"><span class="math display">\[
+\sqrt{x^2+1}
+\tag{3}\]</span></span></p>
+</div></section><section id="html-format" class="level1 appendix" data-number="5"><h2 class="quarto-appendix-heading"><span class="header-section-number">5</span> HTML format</h2><div class="quarto-appendix-contents">
+
+<p>HTML does not handle appendix numbering as well as <span class="math inline">\(\LaTeX\)</span>. However, appendices can be included in the HTML appendix by adding <code>{.appendix}</code> after the section header, e.g.&nbsp;<code># Data {.appendix}</code>.</p>
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-Brown2019" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">Brown T 2019 <em>Deforestation and its impact on global climate change</em> (Anytown, UK: University Press)</div>
 </div>
