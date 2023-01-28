@@ -180,19 +180,10 @@ This template has been written for the submission of an _article_ to one of the 
 
 PDF are rendered using {{< latex >}} but it is best if one can use a Markdown syntax for cross format support.
 
-```{markdown}
-#| echo: true
-{{< latex >}}
-```
+{{{< latex >}}} used in source is a shortcode syntax to print "LaTeX" in fancy text where the shortcode is included in the extension folder `_extensions`. 
 
-used in source is a shortcode syntax where the shortcode is included in the extension folder `_extensions`. 
+Alternatively, Quarto supports a [number of shortcodes](https://quarto.org/docs/extensions/shortcodes.html) natively. For example, {{{< pagebreak >}}}
 
-Alternatively, Quarto supports a [number of shortcodes](https://quarto.org/docs/extensions/shortcodes.html) natively. For example,
-
-```{markdown}
-#| echo: true
-{{< pagebreak >}}
-```
 {{< pagebreak >}}
 
 ...inserts a page break.
@@ -260,7 +251,7 @@ Please see the IOP {{< latex >}} style guide for more about mathematical equatio
 
 In order to avoid package clashes in this template, lines 788-789 of `iopart.cls` were commented out.
 
-## Figures
+## Figures {#sec-figures}
 
 Figures can be included as normal using markdown syntax:
 
@@ -270,18 +261,21 @@ See the link in @sec-quarto-basics for more on figure embedding. For IOP, figure
 
 # Acknowledgements {.unnumbered #sec-ack}
 
-IOP acknowledgements go here: after the last numbered section and before the appendices or references. Acknowledgement of funding should also be included here.
+IOP acknowledgements go here: unnumbered, after the last numbered section and before the appendices or references. Acknowledgement of funding should also be included here.
 
-::: {.content-hidden unless-format="pdf"}
+# Adding appendices
 
-\appendix
+The shortcodes {{{< appendix >}}} and {{{< appendices >}}} have been added for convenience. Appendices must be labelled A, B, C etc. and placed here: after the acknowledgements, before references.
 
-# Labelling and position
+{{< appendices >}}
 
-Appendices must be labelled A, B, C etc. and placed here: after the acknowledgements, before references. They must be proceeded with the {{< latex >}} control sequence `\appendix`, followed by normal markdown section headings `# Data`, `# Tables`, etc.
+# PDF format {.appendix}
 
-# For only one
+For only one appendix, {{{< appendix >}}} inserts the section heading "Appendix", and resets numbering so any equations and figures are correctly numbered. For more than one appendix (as here), {{{< appendices >}}} can be used: it will open the {{< latex >}} `\appendix` environment, allowing use of normal markdown section headers for each appendix: `# Data`, `# Tables`, etc.
 
-If you only require one appendix, simply use an unnumbered section heading, `# Appendix {-}`. However, if the appendix requires numbered figures or equations, `# Appendix {-}` must be preceded by `\appendix` and immediately followed on a new line by `\setcounter{section}{1}`.
+$$
+\sqrt{x^2+1}
+$$ {#eq-app}
 
-:::
+# HTML format {.appendix}
+HTML does not handle appendix numbering as well as {{< latex >}}. However, appendices can be included in the HTML appendix by adding `{.appendix}` after the section header, e.g. `# Data {.appendix}`.

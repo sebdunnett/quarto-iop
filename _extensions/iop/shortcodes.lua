@@ -15,3 +15,25 @@ function latex()
     return pandoc.Span('LaTeX')
   end
 end
+
+function appendix()
+  if quarto.doc.isFormat("pdf") then
+    return {
+      pandoc.RawBlock('tex', '\\appendix'),
+      pandoc.RawBlock('tex', '\\section*{Appendix}'),
+      pandoc.RawBlock('tex', '\\setcounter{section}{1}')
+      }
+  elseif quarto.doc.isFormat("html") then
+    return pandoc.Null()
+  end
+end
+
+function appendices()
+  if quarto.doc.isFormat("pdf") then
+    return {
+      pandoc.RawBlock('tex', '\\appendix')
+      }
+  elseif quarto.doc.isFormat("html") then
+    return pandoc.Null()
+  end
+end
